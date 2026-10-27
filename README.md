@@ -21,6 +21,9 @@ Se compila un kernel Linux **7.2.7** con soporte de depuración, se arranca en u
 
 ---
 
+##Diapositivas en Canvan
+https://canva.link/u0mf16n99ktskag
+
 ## Qué se demuestra
 
 | Experimento | Script | Qué se ve | Usa gdb |
