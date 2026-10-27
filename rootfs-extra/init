@@ -1,0 +1,17 @@
+#!/bin/busybox sh
+/bin/busybox --install -s /bin
+mkdir -p /proc /sys /dev /tmp
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+mount -t debugfs debugfs /sys/kernel/debug
+mount -t tmpfs tmpfs /tmp
+echo
+echo "=== VM de la expo: kernel $(uname -r) ==="
+echo "Demos:  /demo/nice.sh     (reparto de CPU segun nice)"
+echo "        /demo/rt.sh       (cambio a SCHED_FIFO, para el breakpoint)"
+echo "        /demo/fork.sh     (crear procesos, para el breakpoint)"
+echo "Entrar a KGDB a mano:  echo g > /proc/sysrq-trigger"
+echo "Apagar:  poweroff -f"
+echo
+exec setsid cttyhack sh

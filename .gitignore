@@ -1,0 +1,6 @@
+linux-7.2.7/
+linux-*.tar.xz
+busybox
+rootfs/
+initramfs.cpio.gz
+build.log
